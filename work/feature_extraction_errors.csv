@@ -1,0 +1,2 @@
+file,language,error
+/content/work/processed_wav/Telugu/13726.wav,Telugu,"when mode='interp', width=9 cannot exceed data.shape[axis]=8"

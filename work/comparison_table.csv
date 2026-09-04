@@ -1,0 +1,6 @@
+Feature Set,Model,Accuracy
+58-D,RandomForest,0.9037433155080213
+58-D,"Wav2Vec2-XLSR + MLP (raw audio, shared result)",0.9700534759358289
+78-D,RandomForest,0.9208556149732621
+78-D,"Wav2Vec2-XLSR + MLP (raw audio, shared result)",0.9700534759358289
+N/A (raw audio),Federated Learning (Wav2Vec2 + FedAvg),0.28823529411764703

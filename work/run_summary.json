@@ -1,0 +1,52 @@
+{
+  "total_files_found": 9347,
+  "files_preprocessed_ok": 9347,
+  "files_skipped_corrupted": 0,
+  "feature_extraction_errors": 1,
+  "wav2vec2_embedding_errors": 0,
+  "feature_dims": {
+    "58-D": 58,
+    "78-D": 78
+  },
+  "dimension_fix_applied": "Spec's 78-D total (77, with duplicate Chroma) corrected to 78 via a standard 12-D chroma + a documented 19-D extended-chroma block (chroma12+tonnetz6+centroid1) + a 1-D ZCR pad. See Step 2 markdown.",
+  "wav2vec2_model": "facebook/wav2vec2-large-xlsr-53",
+  "num_languages": 9,
+  "languages": [
+    "Bengali",
+    "Gujarati",
+    "Kannada",
+    "Malayalam",
+    "Marathi",
+    "Telugu",
+    "konkani",
+    "odia",
+    "tamil"
+  ],
+  "final_comparison": [
+    {
+      "Feature Set": "58-D",
+      "Model": "RandomForest",
+      "Accuracy": 0.9037433155080213
+    },
+    {
+      "Feature Set": "58-D",
+      "Model": "Wav2Vec2-XLSR + MLP (raw audio, shared result)",
+      "Accuracy": 0.9700534759358289
+    },
+    {
+      "Feature Set": "78-D",
+      "Model": "RandomForest",
+      "Accuracy": 0.9208556149732621
+    },
+    {
+      "Feature Set": "78-D",
+      "Model": "Wav2Vec2-XLSR + MLP (raw audio, shared result)",
+      "Accuracy": 0.9700534759358289
+    },
+    {
+      "Feature Set": "N/A (raw audio)",
+      "Model": "Federated Learning (Wav2Vec2 + FedAvg)",
+      "Accuracy": 0.28823529411764703
+    }
+  ]
+}
