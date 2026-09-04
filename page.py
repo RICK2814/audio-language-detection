@@ -152,7 +152,7 @@ if audio_bytes is not None:
         st.subheader("⚙️ Processing")
         with st.spinner("Analyzing acoustic features..."):
             try:
-                results = classifier.predict(audio_bytes)
+                results = classifier.predict(audio_bytes, source_name=source_name)
             except Exception as e:
                 st.error(f"Error during audio processing: {e}")
                 st.stop()
