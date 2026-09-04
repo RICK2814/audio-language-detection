@@ -1,5 +1,7 @@
 import os
 import io
+import tempfile
+import subprocess
 import numpy as np
 import librosa
 import soundfile as sf
@@ -25,15 +27,52 @@ class AudioClassifier:
         self.classes = self.bundle["classes"]
         self.accuracy = self.bundle.get("accuracy", 0.0)
 
-    def preprocess_audio(self, audio_source):
+    def preprocess_audio(self, audio_source, source_name=None):
         """
         Loads and preprocesses audio from a file path, file-like object, or raw bytes.
         Returns: (preprocessed_waveform, sample_rate, duration_seconds)
         """
-        if isinstance(audio_source, bytes):
-            audio_source = io.BytesIO(audio_source)
-            
-        y, sr = librosa.load(audio_source, sr=TARGET_SR, mono=True)
+        # librosa (as of 1.0.0) only decodes formats that `soundfile`/libsndfile
+        # natively understand, with no ffmpeg fallback. libsndfile cannot decode
+        # AAC/M4A (and some other compressed formats) at all. So instead of
+        # relying on librosa/soundfile to understand the original file, we
+        # always convert the input to a clean mono WAV via ffmpeg first --
+        # ffmpeg reliably handles m4a, mp3, ogg, webm, etc.
+        tmp_in_path = None
+        tmp_out_path = None
+        try:
+            if isinstance(audio_source, bytes):
+                audio_bytes = audio_source
+            elif hasattr(audio_source, "read"):
+                audio_bytes = audio_source.read()
+            else:
+                audio_bytes = None
+
+            if audio_bytes is not None:
+                suffix = ".dat"
+                if source_name and "." in source_name:
+                    suffix = "." + source_name.rsplit(".", 1)[-1].lower()
+                with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+                    tmp.write(audio_bytes)
+                    tmp_in_path = tmp.name
+
+                tmp_out_path = tmp_in_path + "_converted.wav"
+                result = subprocess.run(
+                    ["ffmpeg", "-y", "-i", tmp_in_path, "-ar", str(TARGET_SR), "-ac", "1", tmp_out_path],
+                    capture_output=True,
+                )
+                if result.returncode != 0 or not os.path.exists(tmp_out_path):
+                    err_tail = result.stderr.decode(errors="ignore")[-300:]
+                    raise RuntimeError(f"Could not decode this audio file: {err_tail}")
+
+                y, sr = librosa.load(tmp_out_path, sr=TARGET_SR, mono=True)
+            else:
+                y, sr = librosa.load(audio_source, sr=TARGET_SR, mono=True)
+        finally:
+            for p in (tmp_in_path, tmp_out_path):
+                if p and os.path.exists(p):
+                    os.remove(p)
+
         if y is None or len(y) == 0:
             raise ValueError("Input audio is empty or could not be decoded.")
 
@@ -99,7 +138,7 @@ class AudioClassifier:
         ])
         return vec
 
-    def predict(self, audio_source):
+    def predict(self, audio_source, source_name=None):
         """
         Given an audio source, returns:
         {
@@ -112,7 +151,7 @@ class AudioClassifier:
             'final_duration': float
         }
         """
-        y, sr, orig_len, final_len = self.preprocess_audio(audio_source)
+        y, sr, orig_len, final_len = self.preprocess_audio(audio_source, source_name=source_name)
         feat_vec = self.extract_features_78d(y, sr)
         feat_vec_scaled = self.scaler.transform(feat_vec.reshape(1, -1))
 
