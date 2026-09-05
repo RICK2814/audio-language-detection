@@ -8,9 +8,17 @@
 [![Librosa](https://img.shields.io/badge/Librosa-Audio%20Processing-5C3EE8)](https://librosa.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=760&lines=Detect+Indian+Languages+from+Speech;Upload+Audio+%7C+Record+Live+%7C+Analyze+Confidence;78-D+Acoustic+Features+%2B+Random+Forest" alt="Animated project tagline" />
+</p>
+
 **Live Demo:** https://audio-language-detection-bhwha53elusztx56o8yb2v.streamlit.app/
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=8BE9FD&width=520&lines=%E2%9C%A8+Project+Overview" alt="Animated Overview header" />
+</p>
 
 ## ✨ Overview
 
@@ -34,6 +42,10 @@ The pipeline combines signal preprocessing, handcrafted acoustic feature extract
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=50FA7B&width=560&lines=%F0%9F%9A%80+Live+Application" alt="Animated Live Application header" />
+</p>
+
 ## 🚀 Live Application
 
 Open the deployed application:
@@ -43,6 +55,10 @@ Open the deployed application:
 You can upload a supported audio file or record speech directly from the browser and inspect the model output and visualizations.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=F1FA8C&width=520&lines=%F0%9F%8E%AF+Key+Features" alt="Animated Key Features header" />
+</p>
 
 ## 🎯 Key Features
 
@@ -75,6 +91,10 @@ The classifier uses a 78-dimensional acoustic feature representation built from:
 - Interactive exploratory visuals
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FF79C6&width=440&lines=%F0%9F%8F%97%EF%B8%8F+ML+Pipeline" alt="Animated Pipeline header" />
+</p>
 
 ## 🏗️ Pipeline
 
@@ -109,6 +129,10 @@ Language Prediction
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=BD93F9&width=500&lines=%F0%9F%93%81+Project+Structure" alt="Animated Project Structure header" />
+</p>
+
 ## 📁 Project Structure
 
 ```text
@@ -137,6 +161,10 @@ Language Prediction
 | `work/` | Benchmark/evaluation artifacts |
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=8BE9FD&width=430&lines=%E2%9A%A1+Quick+Start" alt="Animated Quick Start header" />
+</p>
 
 ## ⚡ Quick Start
 
@@ -167,6 +195,10 @@ http://localhost:8501
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FFB86C&width=500&lines=%F0%9F%A7%AA+Inference+Flow" alt="Animated Inference Flow header" />
+</p>
+
 ## 🧪 Inference Flow
 
 The application follows the same general path for uploaded audio and microphone recordings:
@@ -182,6 +214,10 @@ The application follows the same general path for uploaded audio and microphone 
 9. Visualize prediction confidence and audio characteristics.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FF5555&width=560&lines=%F0%9F%A4%96+Machine+Learning+Architecture" alt="Animated ML Architecture header" />
+</p>
 
 ## 🤖 Machine Learning Architecture
 
@@ -207,6 +243,10 @@ This design keeps feature extraction and model inference separated from the Stre
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=6272A4&width=470&lines=%F0%9F%93%88+Visual+Analysis" alt="Animated Visual Analysis header" />
+</p>
+
 ## 📈 Visual Analysis
 
 The application is designed not only to return a class label but also to expose interpretable audio-side information through visualizations such as:
@@ -217,11 +257,19 @@ The application is designed not only to return a class label but also to expose 
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=36BCF7&width=500&lines=%F0%9F%94%AC+Research+%26+Experimentation" alt="Animated Research header" />
+</p>
+
 ## 🔬 Research / Experimentation
 
 The repository includes a Colab notebook and working artifacts for experimentation and benchmark analysis. These materials can be used to inspect the feature pipeline, training workflow, and evaluation process before deploying changes to the Streamlit interface.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=50FA7B&width=420&lines=%F0%9F%8C%90+Deployment" alt="Animated Deployment header" />
+</p>
 
 ## 🌐 Deployment
 
@@ -247,6 +295,10 @@ requirements.txt
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=F1FA8C&width=500&lines=%F0%9F%9B%A0%EF%B8%8F+Development+Commands" alt="Animated Development header" />
+</p>
+
 ## 🛠️ Development Commands
 
 ```bash
@@ -263,6 +315,10 @@ python train_and_save_model.py
 > The training command should only be run when you intentionally want to regenerate the model artifacts used by the application.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=8BE9FD&width=520&lines=%E2%9C%85+Recommended+Test+Checklist" alt="Animated Test Checklist header" />
+</p>
 
 ## ✅ Recommended Test Checklist
 
@@ -282,6 +338,10 @@ Before publishing a new version, verify:
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FF5555&width=500&lines=%E2%9A%A0%EF%B8%8F+Notes+%26+Limitations" alt="Animated Limitations header" />
+</p>
+
 ## ⚠️ Notes & Limitations
 
 Prediction quality depends on recording conditions, speaker characteristics, pronunciation, background noise, sample duration, and how representative the training data is of real-world speech.
@@ -290,11 +350,19 @@ A model confidence score should be interpreted as the classifier's estimated cla
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=BD93F9&width=520&lines=%F0%9F%94%90+Model+%26+Data+Handling" alt="Animated Model and Data header" />
+</p>
+
 ## 🔐 Model & Data Handling
 
 The application performs local preprocessing of the supplied audio before inference. The repository includes the serialized model bundle used for prediction. Avoid committing private or sensitive recordings to the repository.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=36BCF7&width=520&lines=%F0%9F%93%A6+Project+Links" alt="Animated Project Links header" />
+</p>
 
 ## 📦 GitHub Repository
 
@@ -303,6 +371,10 @@ The application performs local preprocessing of the supplied audio before infere
 **Live Demo:** https://audio-language-detection-bhwha53elusztx56o8yb2v.streamlit.app/
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=50FA7B&width=440&lines=%F0%9F%97%BA%EF%B8%8F+Roadmap" alt="Animated Roadmap header" />
+</p>
 
 ## 🗺️ Roadmap
 
@@ -318,11 +390,19 @@ Potential next improvements:
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FFB86C&width=400&lines=%F0%9F%93%84+License" alt="Animated License header" />
+</p>
+
 ## 📄 License
 
 This project is released under the **MIT License**.
 
 ---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=F1FA8C&width=520&lines=%E2%AD%90+Support+the+Project" alt="Animated Support header" />
+</p>
 
 ## ⭐ Support the Project
 
