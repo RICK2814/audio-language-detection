@@ -196,7 +196,7 @@ http://localhost:8501
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FFB86C&width=500&lines=%F0%9F%A7%AA+Inference+Flow" alt="Animated Inference Flow header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=800&color=FFB86C&width=500&lines=%F0%9F%A7%AA+Inference+Flow" alt="Animated Inference Flow header" />
 </p>
 
 ## 🧪 Inference Flow
