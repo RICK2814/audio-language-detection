@@ -1,6 +1,7 @@
 # 🎙️ Multilingual Audio Language Detection Interface
 
 An interactive, offline web application running on `localhost` for detecting spoken Indian languages (*Bengali, Gujarati, Kannada, Konkani, Malayalam, Marathi, Odia, Tamil, Telugu*) from audio recordings using acoustic feature extraction (78-D) and Random Forest classification.
+Link - https://audio-language-detection-bhwha53elusztx56o8yb2v.streamlit.app/
 
 ## 📂 Project Structure
 
