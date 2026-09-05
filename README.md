@@ -2,11 +2,8 @@
 
 An interactive, offline web application running on `localhost` for detecting spoken Indian languages (*Bengali, Gujarati, Kannada, Konkani, Malayalam, Marathi, Odia, Tamil, Telugu*) from audio recordings using acoustic feature extraction (78-D) and Random Forest classification.
 
----
-
 ## 📂 Project Structure
 
-```
 ├── page.py                   # Streamlit web interface (Upload, Record, Visualizations)
 ├── inference.py              # Audio preprocessing & 78-D feature extraction engine
 ├── train_and_save_model.py   # Model training & export script
